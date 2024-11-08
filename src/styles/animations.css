@@ -1,0 +1,110 @@
+/* src/styles/animations.css */
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Slide-in from Left */
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Slide-in from Right */
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Scale-up Animation */
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Rotation Animation */
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Pulse Animation */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Bounce Animation */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Applying Animations */
+  .fade-in {
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .slide-in-left {
+    animation: slideInLeft 1s ease forwards;
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 1s ease forwards;
+  }
+  
+  .scale-up {
+    animation: scaleUp 0.7s ease forwards;
+  }
+  
+  .rotate {
+    animation: rotate 2s linear infinite;
+  }
+  
+  .pulse {
+    animation: pulse 1.5s ease infinite;
+  }
+  
+  .bounce {
+    animation: bounce 1s ease infinite;
+  }
+  

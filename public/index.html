@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#e63946" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <!-- SEO Meta Tags for Better Search Engine Optimization -->
+    <meta name="description" content="Explore the best luxury car brands in the world with interactive pages and advanced animations." />
+    <meta name="author" content="Muneeb Bhatti" />
+    <meta name="keywords" content="luxury cars, car brands, mercedes, bmw, ferrari, pagani, car enthusiasts, automobile, sports cars" />
+    
+    <!-- Social Media Sharing and Open Graph Tags -->
+    <meta property="og:title" content="Luxury Cars" />
+    <meta property="og:description" content="Discover the top luxury car brands including Mercedes, BMW, Ferrari, Pagani, and more." />
+    <meta property="og:image" content="/images/og-image.jpg" />
+    <meta property="og:url" content="https://www.luxurycars.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Luxury Cars" />
+    <meta name="twitter:description" content="Explore the world’s most luxurious car brands." />
+    <meta name="twitter:image" content="/images/og-image.jpg" />
+    
+    <!-- Document Title -->
+    <title>Luxury Cars - Explore the Best Car Brands</title>
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/apple-icon.png" />
+    <link rel="icon" sizes="192x192" href="/images/android-icon-192x192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Google Fonts for Custom Typography -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" />
+    
+    <!-- External Stylesheets (Global Styles) -->
+    <link rel="stylesheet" href="/styles/global.css" />
+    
+    <!-- Preload Fonts and External Resources for Optimization -->
+    <link rel="preload" href="/fonts/roboto.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    
+    <!-- Preconnect to External Resources to Speed Up Fetching -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.example.com" />
+    
+    <!-- PWA (Progressive Web App) Setup -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    <!-- Web Manifest for PWA Setup -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Viewport Scaling for Responsive Web Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- CSP (Content Security Policy) for Security -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';" />
+    
+    <!-- Performance: Include the Link for Preloading CSS (If Needed for Larger Files) -->
+    <link rel="preload" href="/styles/main.css" as="style" />
+    
+    <!-- Critical Inline Styles (for Fallback before CSS is Loaded) -->
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: #f4f4f4;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <!-- Accessibility Enhancements: ARIA Roles and Landmarks -->
+    <header role="banner">
+      <nav role="navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/brands">Brands</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main role="main">
+      <section id="hero" role="region" aria-labelledby="hero-title">
+        <h1 id="hero-title">Welcome to Luxury Cars</h1>
+        <p>Explore the best car brands in the world.</p>
+        <a href="#brands" class="cta-button">Explore Now</a>
+      </section>
+      
+      <section id="brands" role="region" aria-labelledby="brands-title">
+        <h2 id="brands-title">Car Brands</h2>
+        <!-- Dynamic Content Placeholder (Could Be Filled by React) -->
+        <div id="brand-cards-container"></div>
+      </section>
+    </main>
+    
+    <footer role="contentinfo">
+      <p>© 2024 Luxury Cars, All Rights Reserved</p>
+    </footer>
+    
+    <!-- Main JS Bundle (Defer for Performance) -->
+    <script defer src="/js/main.js"></script>
+
+    <!-- Service Worker Registration (For PWA) -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('/service-worker.js')
+            .then((registration) => {
+              console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch((error) => {
+              console.error('Service Worker registration failed:', error);
+            });
+        });
+      }
+    </script>
+
+    <!-- Additional Custom JS for Tracking or Interactivity (Defer) -->
+    <script defer src="/js/custom.js"></script>
+
+    <!-- HTML Analytics Integration (Optional) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-XXXXXXXXX-X');
+    </script>
+  </body>
+</html>
